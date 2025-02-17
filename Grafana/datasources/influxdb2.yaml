@@ -1,0 +1,27 @@
+apiVersion: 1
+
+datasources:
+  - name: influxbd2
+    type: influxdb
+    typeName: InfluxDB
+    uid: cecn1sg79m9s0b
+    access: proxy
+    url: http://influxdb2:8086
+    basicAuth: false
+    basicAuthUser: ""
+    withCredentials: false
+    isDefault: true
+    editable: true
+    user: ""
+    database: ""
+    secureJsonData:
+      token: ${INFLUXDB_TOKEN}
+    secureJsonFields:
+      password: true
+      token: true
+    jsonData:
+      httpMode: POST
+      dbName: WeatherBucket
+      defaultBucket: WeatherBucket
+      organization: WeatherOrg
+      version: Flux

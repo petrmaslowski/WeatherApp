@@ -1,0 +1,30 @@
+{
+    "openweathermap": {
+        "url" : "https://api.openweathermap.org/data/3.0/onecall",
+        "params": {
+            "lat": 49.5955,
+            "lon": 17.2518,
+            "units": "metric",
+            "lang": "en",
+            "appid": ""
+        }
+    },
+    "db": {
+        "host": "http://localhost",
+        "port": 8086,
+        "name": "WeatherBucket",
+        "org": "WeatherOrg",
+        "token": ""
+    },
+    "sensor_calculation": {
+        "run_interval": 60,
+        "measurement": "IndoorMeasurement",
+        "calibration_time": 300,
+        "humidity_baseline": 40.0,
+        "humidity_weight": 0.25
+    },
+    "openweather_calculation": {
+        "run_interval": 600,
+        "measurement": "OpenWeatherMapMeasurement"
+    }
+}
